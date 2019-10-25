@@ -1,27 +1,27 @@
-class ApbricksController < ApplicationController
+class M33bricksController < ApplicationController
   before_action :login_required
 
 	layout 'phatcc'
 
   def index
-    @apbricks = Apbrick.all
+    @m33bricks = M33brick.all
   end
 
   def show
-    @apbrick = Apbrick.find(params[:id])
-    @sclusters = @apbrick.apobjects.all.order(viewfrac: :desc)
+    @m33brick = M33brick.find(params[:id])
+    @sclusters = @m33brick.m33objects.all.order(viewfrac: :desc)
   end
 
   def csort
-    @apbrick = Apbrick.find(params[:id])
-    clusters = @apbrick.apobjects.all
-    @sclusters = clusters.sort_by{ |c| c.viewfrac*(1.-c.galfrac) }.reverse
+    @m33brick = M33brick.find(params[:id])
+    clusters = @m33brick.m33objects.all
+    @sclusters = clusters.sort_by{ |c| c.viewfrac*(c.cfrac) }.reverse
   end
 
   def gsort
-    @apbrick = Apbrick.find(params[:id])
-    galaxies = @apbrick.apobjects.all
-    @sclusters = galaxies.sort_by{ |c| c.viewfrac*(c.galfrac) }.reverse
+    @m33brick = M33brick.find(params[:id])
+    galaxies = @m33brick.m33objects.all
+    @sclusters = galaxies.sort_by{ |c| c.viewfrac*(c.gfrac) }.reverse
   end
 
 end

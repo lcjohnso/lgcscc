@@ -1,22 +1,22 @@
 <h1>
-  <b>Brick <%=h @apbrick.id %> Clusters: Sorted by ClusterFrac</b>
+  <b>Brick <%=h @m33brick.id %> Clusters: Sorted by ClusterFrac</b>
 </h1>
 
 <p>
-<%= link_to 'Back to Brick Index', apbricks_path %>
+<%= link_to 'Back to Brick Index', m33bricks_path %>
 </p>
 
 <p>
-NOTE: Displayed Ratings: ClusterFrac | ViewFrac | GalFrac
+NOTE: Displayed Ratings: ClusterFrac | ViewFrac | CFrac
 </p>
 
 <table>
   <tr>
   <% column = 0 %>
   <% @sclusters.each do |c| %>
-  	<td id="indextable"><%= link_to image_tag(c.image_color, :height => '120'), cshow_apobject_path(c) %><br>
-	    <%= link_to c.id, cshow_apobject_path(c) %><br>
-  	    <%=h sprintf("%.2f",c.viewfrac*(1.-c.galfrac)) %> | <%=h sprintf("%.2f",c.viewfrac) %> | <%=h sprintf("%.2f",c.galfrac) %>
+  	<td id="indextable"><%= link_to image_tag(c.image_color, :height => '120'), cshow_m33object_path(c) %><br>
+	    <%= link_to c.id, cshow_m33object_path(c) %><br>
+  	    <%=h sprintf("%.2f",c.viewfrac*(c.cfrac)) %> | <%=h sprintf("%.2f",c.viewfrac) %> | <%=h sprintf("%.2f",c.cfrac) %>
   	</td>
 	<% column += 1 %>
   	<% if column==8 %>
@@ -28,5 +28,5 @@ NOTE: Displayed Ratings: ClusterFrac | ViewFrac | GalFrac
 </table>
 
 <p>
-<%= link_to 'Back to Brick Index', apbricks_path %>
+<%= link_to 'Back to Brick Index', m33bricks_path %>
 </p>
