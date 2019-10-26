@@ -1,7 +1,7 @@
 class UserController < ApplicationController
   before_action :login_required, :only => [:my_account] #:index, :show]
 
-	layout 'phatcc'
+	layout 'lgcscc'
 
   def login
     if not @user.nil? then

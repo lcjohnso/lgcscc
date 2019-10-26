@@ -1,7 +1,7 @@
 class M33bricksController < ApplicationController
   before_action :login_required
 
-	layout 'phatcc'
+	layout 'lgcscc'
 
   def index
     @m33bricks = M33brick.all

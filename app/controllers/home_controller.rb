@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
-	layout 'phatcc'
-	
+	layout 'lgcscc'
+
   def index
   end
 

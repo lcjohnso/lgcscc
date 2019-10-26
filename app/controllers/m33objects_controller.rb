@@ -1,7 +1,7 @@
 class M33objectsController < ApplicationController
   before_action :login_required
 
-	layout 'phatcc'
+	layout 'lgcscc'
 
   def show
     @m33object = M33object.find(params[:id])
