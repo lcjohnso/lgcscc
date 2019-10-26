@@ -1,5 +1,5 @@
 class M33object < ActiveRecord::Base
-  belongs_to :m33brick
+  belongs_to :m33brick, foreign_key: "brick"
 
 	#Interpreted Values
 	def prioritycolor
@@ -129,11 +129,11 @@ class M33object < ActiveRecord::Base
 	end
 
 	def intfit_pdf
-          path = WEB_URL+'/ap_intpdf_m33/'+self.fileid+'_pdf1d.png'
+          path = WEB_URL+'/lgcs-m33_intpdf_m33/'+self.fileid+'_pdf1d.png'
 	end
 
 	def intfit_pdf2d
-          path = WEB_URL+'/ap_intpdf_m33/'+self.fileid+'_pdf2d.png'
+          path = WEB_URL+'/lgcs-m33_intpdf_m33/'+self.fileid+'_pdf2d.png'
 	end
 
 end

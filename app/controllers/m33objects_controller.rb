@@ -5,7 +5,7 @@ class M33objectsController < ApplicationController
 
   def show
     @m33object = M33object.find(params[:id])
-    @m33brick = M33brick.find(@m33object.m33brick_id)
+    @m33brick = M33brick.find(@m33object.brick)
 
     sm33objects = @m33brick.m33objects.all.order(viewfrac: :desc)
     @iclst = sm33objects.index(@m33object)
@@ -20,7 +20,7 @@ class M33objectsController < ApplicationController
 
   def cshow
     @m33object = M33object.find(params[:id])
-    @m33brick = M33brick.find(@m33object.m33brick_id)
+    @m33brick = M33brick.find(@m33object.brick)
 
     clusters = @m33brick.m33objects.all
     sm33objects = clusters.sort_by{ |c| c.viewfrac*(c.cfrac) }.reverse
@@ -35,7 +35,7 @@ class M33objectsController < ApplicationController
 
   def gshow
     @m33object = M33object.find(params[:id])
-    @m33brick = Apbrick.find(@m33object.m33brick_id)
+    @m33brick = M33brick.find(@m33object.brick)
 
     galaxies = @m33brick.m33objects.all
     sm33objects = galaxies.sort_by{ |c| c.viewfrac*(c.gfrac) }.reverse
