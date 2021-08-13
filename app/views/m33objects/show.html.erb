@@ -39,8 +39,8 @@
   <tr>
   	<th>Color</th>
   	<th>475</th>
-  	<th>814</th>
-<!--  	<th>275</th>
+<!--  	<th>814</th>
+  	<th>275</th>
   	<th>336</th>
   	<th>110</th>
  	  <th>160</th> -->
@@ -48,8 +48,8 @@
   <tr>
   	<td><%= image_tag(@m33object.image_color, :height => '200') %></td>
   	<td><%= image_tag(@m33object.image_475, :height => '200') %></td>
-  	<td><%= image_tag(@m33object.image_814, :height => '200') %></td>
-<!--   	<td><%= image_tag(@m33object.image_275, :height => '200') %></td>
+<!--  	<td><%= image_tag(@m33object.image_814, :height => '200') %></td>
+   	<td><%= image_tag(@m33object.image_275, :height => '200') %></td>
   	<td><%= image_tag(@m33object.image_336, :height => '200') %></td>
   	<td><%= image_tag(@m33object.image_110, :height => '200') %></td>
   	<td><%= image_tag(@m33object.image_160, :height => '200') %></td> -->
@@ -69,8 +69,10 @@
 
 <!-- Fit Images -->
 <%= image_tag(@m33object.fit_cmd, :height => '300') %>
-<%= image_tag(@m33object.fit_pdf, :height => '300') %>
-<%= image_tag(@m33object.fit_res, :height => '300') %>
+<br />
+<%= image_tag(@m33object.fit_pdf_age, :height => '150') %>
+<%= image_tag(@m33object.fit_pdf_mass, :height => '150') %>
+<%= image_tag(@m33object.fit_pdf_av, :height => '150') %>
 <br />
 
 <!-- Navigation -->
