@@ -121,19 +121,11 @@ class M33object < ActiveRecord::Base
 	end
 
 	def fit_pdf
-          path = WEB_URL+'/fitpdfs_m33/All_PDFs/'+self.id.to_s+'_pdf.png'
+          path = WEB_URL+'/fitpdfs_m33/Cluster_ID_'+self.id.to_s+'_pdf.png'
 	end
 
-  def fit_pdf_age
-          path = WEB_URL+'/fitpdfs_m33/Age_PDFs/Age_Cluster_ID_'+self.id.to_s+'.png'
-	end
-
-  def fit_pdf_mass
-          path = WEB_URL+'/fitpdfs_m33/Mass_PDFs/Mass_Cluster_ID_'+self.id.to_s+'.png'
-	end
-
-  def fit_pdf_av
-          path = WEB_URL+'/fitpdfs_m33/AV_PDFs/AV_Cluster_ID_'++self.id.to_s+'.png'
+  def fit_cmd_residual
+          path = WEB_URL+'/fitresiduals_m33/Residual_Plot__'+self.id.to_s+'.png'
 	end
 
 	def intfit_pdf
