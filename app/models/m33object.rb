@@ -43,12 +43,12 @@ class M33object < ActiveRecord::Base
 	end
 
 	def optcolor
-          if (self.mag475 != nil && self.mag814 != nil)
-            optcolor = sprintf("%.2f",self.mag475-self.mag814)
+    if (self.mag475 != nil && self.mag814 != nil)
+      optcolor = sprintf("%.2f",self.mag475-self.mag814)
 	  else
-            optcolor = -999
+      optcolor = -999
 	  end
-          optcolor
+    optcolor
 	end
 
 	def radangular
@@ -82,37 +82,37 @@ class M33object < ActiveRecord::Base
 
 	def image_color
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_color.jpg'
-        end
+  end
 
  	def image_275
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_F275W.jpg'
-        end
+  end
 
-  	def image_336
+  def image_336
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_F336W.jpg'
-        end
+  end
 
 	def image_475
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_F475W.jpg'
-        end
+  end
 
  	def image_814
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_F814W.jpg'
-        end
+  end
 
  	def image_110
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_F110W.jpg'
-        end
+  end
 
-  	def image_160
+  def image_160
           path = WEB_URL+IMAGE_DIR_M33+'/'+self.fileid+'_F160W.jpg'
-        end
+  end
 
-        def cmd_image
+  def cmd_image
           path = WEB_URL+CMD_DIR_M33+'/'+self.fileid+'_cmd.png'
 	end
 
-        def sed_image
+  def sed_image
           path = WEB_URL+'/seds_m33/'+self.fileid+'_sed.png'
 	end
 
@@ -121,11 +121,11 @@ class M33object < ActiveRecord::Base
 	end
 
 	def fit_pdf
-          path = WEB_URL+'/fitpdfs_m33/Cluster_ID_'+self.id.to_s+'_pdf.png'
+          path = WEB_URL+'/fitpdfs_m33/Cluster_ID_'+self.id.to_s+'.png'
 	end
 
   def fit_cmd_residual
-          path = WEB_URL+'/fitresiduals_m33/Residual_Plot__'+self.id.to_s+'.png'
+          path = WEB_URL+'/fitresiduals_m33/Residual_Plot_'+self.id.to_s+'.png'
 	end
 
 	def intfit_pdf
