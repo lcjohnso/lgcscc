@@ -64,14 +64,17 @@
 <br />
 
 <!-- Images -->
+<% if (@m33object.bestfit_age.nil?) %>
 <%= image_tag(@m33object.cmd_image, :height => '300') %>
 <%= image_tag(@m33object.sed_image, :height => '300') %>
 <br />
+<% end %>
 
 <!-- IntFit Images -->
+<!--
 <%= image_tag(@m33object.intfit_pdf, :height => '200') %>
 <%= image_tag(@m33object.intfit_pdf2d, :height => '200') %>
-<br />
+<br /> -->
 
 <!-- CMD Fit Data -->
 <table>
