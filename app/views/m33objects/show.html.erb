@@ -21,15 +21,21 @@
     <th>RA</th>
     <th>Dec</th>
     <th>Subimage</th>
+    <th>Radius(")</th>
+    <th>EffRadius(")</th>
     <th>ViewFrac</th>
     <th>CFrac</th>
+    <th>Wght ClstFrac</th>
   </tr>
   <tr>
     <td><%=h @m33object.ra %></td>
     <td><%=h @m33object.dec %></td>
     <td><%=h @m33object.subimg %></td>
+    <td><%=h @m33object.radius_arcsec %></td>
+    <td><%=h @m33object.radius_eff_arcsec %></td>
     <td <%=h @m33object.prioritycolor %> ><%=h @m33object.viewfrac %></td>
     <td <%=h @m33object.prioritycolor %> ><%=h @m33object.cfrac %></td>
+    <td <%=h @m33object.weightedcolor %> ><%=h @m33object.newclstfrac %></td>
   </tr>
 </table>
 <br />
@@ -65,6 +71,23 @@
 <!-- IntFit Images -->
 <%= image_tag(@m33object.intfit_pdf, :height => '200') %>
 <%= image_tag(@m33object.intfit_pdf2d, :height => '200') %>
+<br />
+
+<!-- CMD Fit Data -->
+<table>
+  <tr>
+    <th>Best log(Age)</th>
+    <th>Best log(Mass)</th>
+    <th>Best AV</th>
+    <th>Best BG Scaling</th>
+  </tr>
+  <tr>
+    <td><%=h @m33object.bestfit_age %></td>
+    <td><%=h @m33object.bestfit_mass %></td>
+    <td><%=h @m33object.bestfit_av %></td>
+    <td><%=h @m33object.bestfit_bgsf %></td>
+  </tr>
+</table>
 <br />
 
 <!-- Fit Images -->

@@ -13,6 +13,17 @@ class M33object < ActiveRecord::Base
           bckcolor
 	end
 
+  def weightedcolor
+          if (self.newclstfrac > 0.674)
+            bckcolor="BGCOLOR='green'"
+          elsif (self.newclstfrac > 0.568)
+            bckcolor="BGCOLOR='yellow'"
+          else
+            bckcolor="BGCOLOR='red'"
+          end
+          bckcolor
+	end
+
 	def altidcolor
           if (self.altflag == 1)
             bckcolor="BGCOLOR='green'"
