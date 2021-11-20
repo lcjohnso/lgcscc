@@ -64,7 +64,7 @@
 <br />
 
 <!-- Images -->
-<% if (@m33object.bestfit_age < -90) %>
+<% if (@m33object.bestfit_age && @m33object.bestfit_age < -90) %>
 <%= image_tag(@m33object.cmd_image, :height => '300') %>
 <%= image_tag(@m33object.sed_image, :height => '300') %>
 <br />
