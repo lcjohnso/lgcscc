@@ -16,10 +16,10 @@ default: &default
 
 development:
   <<: *default
-  host: us-cdbr-iron-east-02.cleardb.net
-  database: heroku_41933d127009672
-  username: b385a88b385d7f
-  password: <%= ENV['LGCSCC_DATABASE_PASSWORD'] %>
+  host: cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+  database: ibwrxqziemdik376
+  username: ekhbj8rdjxcaoxxi
+  password: <%= ENV['LGCSCC_JAWSDB_PASSWORD'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: heroku_41933d127009672
-  username: b385a88b385d7f
-  password: <%= ENV['LGCSCC_DATABASE_PASSWORD'] %>
+  database: ibwrxqziemdik376
+  username: ekhbj8rdjxcaoxxi
+  password: <%= ENV['LGCSCC_JAWSDB_PASSWORD'] %>
