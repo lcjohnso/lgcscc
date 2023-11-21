@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
+  host: cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
   database: ibwrxqziemdik376
   username: ekhbj8rdjxcaoxxi
   password: <%= ENV['LGCSCC_JAWSDB_PASSWORD'] %>
